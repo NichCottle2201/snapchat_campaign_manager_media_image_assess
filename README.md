@@ -2,7 +2,7 @@
 
 ## Overview
 
-This Python script integrates with the Snapchat Ads API to automate campaign management based on Return on Ad Spend (ROAS). Specifically, it pauses all campaigns in a specified account that have a ROAS of less than £1 over the last 30 days (excluding today).
+This Python script integrates with the Snapchat Ads API to automate campaign management based on Return on Ad Spend (ROAS). Specifically, it pauses all campaigns in a specified account that have a ROAS < 1 over the last 30 days (excluding today).
 
 ## Features
 
@@ -66,10 +66,7 @@ To run this script regularly:
 
 - Never commit the access token to version control (gitignore applied)
 - In a production & dev enviros, must use environment variables to handle the access token
-
-## Snap Rate Limiting Warning
-
-Be aware of Snapchat Ads API rate limits. If you're dealing with a large number of campaigns, you may need to implement rate limiting in your script.
+- Be aware of Snapchat Ads API rate limits. If you're dealing with a large number of campaigns, you may need to implement rate limiting in your script.
 
 ## Testing
 
