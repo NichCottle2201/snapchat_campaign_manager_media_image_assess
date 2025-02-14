@@ -14,7 +14,7 @@ This Python script integrates with the Snapchat Ads API to automate campaign man
 ## Requirements
 
 - Python 3.6+
-- `requests` library
+- Packages listed in `requirements.txt
 
 ## Setup
 
