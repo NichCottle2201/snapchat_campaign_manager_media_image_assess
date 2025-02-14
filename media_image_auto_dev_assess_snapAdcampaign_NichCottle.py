@@ -2,15 +2,15 @@ import requests
 from datetime import datetime, timedelta
 import logging
 
-# Set up logging
+# logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Snapchat Ads API configuration
 BASE_URL = "https://adsapi.snapchat.com/v1"
 ACCOUNT_ID = "380h9661-436e-51eb-0g7c-42d5b97f219c"
-ACCESS_TOKEN = "YOUR_ACCESS_TOKEN_HERE"  # *** I HAVE NOT IMPLEMENTED ENVIRO VARIABLES IN THIS PROJECT AS IS BEST PRACTICE IN DEV AND PROD ENVIROS
+ACCESS_TOKEN = "YOUR_ACCESS_TOKEN_HERE"  # NOT MAKING USE OF STANDARD ENVIRONMENT FILE AS PER USUAL IN DEV & PROD ENVIROS
 
-# Calculate date range (last 30 days excluding today)
+# date range
 end_date = datetime.now().date() - timedelta(days=1)
 start_date = end_date - timedelta(days=30)
 
@@ -72,8 +72,10 @@ def main():
 
     except requests.exceptions.RequestException as e:
         logging.error(f"API request failed: {e}")
+        raise
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
+        raise
 
 if __name__ == "__main__":
     main()
