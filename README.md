@@ -1,5 +1,4 @@
-```markdown type="markdown" project="Snapchat Ads API Integration" file="README.md"
-[v0-no-op-code-block-prefix]# Snapchat Ads API Campaign Manager
+# Snapchat Ads API Campaign Manager
 
 ## Overview
 
