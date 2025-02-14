@@ -8,7 +8,7 @@ This Python script integrates with the Snapchat Ads API to automate campaign man
 
 - Fetches all campaigns for a specified Snapchat Ads account
 - Calculates ROAS for each campaign over the last 30 days
-- Automatically pauses campaigns with ROAS < £1
+- Automatically pauses campaigns with ROAS < 1
 - Provides logging for actions and errors
 
 ## Requirements
@@ -45,7 +45,7 @@ python media_image_auto_dev_assess_snapAdcampaign_NichCottle.py
 The script will:
 1. Fetch all campaigns for the specified account
 2. Calculate ROAS for each campaign over the last 30 days
-3. Pause any campaigns with ROAS < £1
+3. Pause any campaigns with ROAS < 1
 4. Log all actions and any errors
 
 ## Logging
@@ -62,26 +62,19 @@ To run this script regularly:
 - On Windows, you can use Task Scheduler
 - Alternatively, you can use cloud-based scheduling services like AWS Lambda with CloudWatch Events or Google Cloud Functions with Cloud Scheduler
 
-## Security Considerations
+## Security Standardization
 
-- Never commit your access token to version control
-- In a production environment, use environment variables or a secure secret management system to handle the access token
+- Never commit the access token to version control (gitignore applied)
+- In a production & dev enviros, must use environment variables to handle the access token
 
-## Rate Limiting
+## Snap Rate Limiting Warning
 
 Be aware of Snapchat Ads API rate limits. If you're dealing with a large number of campaigns, you may need to implement rate limiting in your script.
 
-## Disclaimer
-
-This script directly interacts with your Snapchat Ads campaigns. Use it carefully and consider testing in a non-production environment first.
-
-## Support
-
-For any issues or questions, please open an issue in this repository or contact your Snapchat Ads API support channel.
-
 ## Testing
 
-This project includes a suite of unit tests to ensure the correct functioning of the code. The tests use Python's built-in `unittest` framework and mock API responses to test the functionality without making actual API calls.
+This project includes a suite of unit tests to ensure the correct functioning of the code. 
+The tests use Python's built-in `unittest` framework and mock API responses to test the functionality without making actual API calls.
 
 To run the tests:
 
@@ -98,5 +91,3 @@ The tests cover:
 - Pausing campaigns
 - The main function's logic for different ROAS scenarios
 - Error handling
-
-It's recommended to run these tests after any changes to the main script to ensure everything is working as expected.
