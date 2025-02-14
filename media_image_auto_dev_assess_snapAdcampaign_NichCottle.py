@@ -56,15 +56,16 @@ def main():
             
             spend = float(stats["spend"])
             conversion_value = float(stats["conversion_purchases_value"])
-            
+
+            # assuming campaign curreny is also £ 
             if spend > 0:
                 roas = conversion_value / spend
             else:
                 roas = 0
 
-            logging.info(f"Campaign {campaign_id} - ROAS: £{roas:.2f}")
+            logging.info(f"Campaign {campaign_id} - ROAS (micro): {roas}")
 
-            if roas < 1:
+            if roas < 1000000:        # Snapchat works in micro currnecy ( 1 unit = 1000000 micro currency units)
                 logging.info(f"Pausing campaign {campaign_id} due to low ROAS")
                 pause_campaign(campaign_id)
             else:
