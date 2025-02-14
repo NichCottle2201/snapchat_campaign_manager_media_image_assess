@@ -39,7 +39,7 @@ This Python script integrates with the Snapchat Ads API to automate campaign man
 Run the script using Python:
 
 \`\`\`
-python snapchat_ads_campaign_manager.py
+python media_image_auto_dev_assess_snapAdcampaign_NichCottle.py
 \`\`\`
 
 The script will:
